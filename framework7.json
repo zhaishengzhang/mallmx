@@ -1,0 +1,26 @@
+{
+  "cwd": "/Users/zzs/myCode/meixi1",
+  "type": [
+    "web"
+  ],
+  "name": "meixi",
+  "framework": "react",
+  "template": "blank",
+  "cssPreProcessor": "less",
+  "bundler": "webpack",
+  "webpack": {
+    "developmentSourceMap": true,
+    "productionSourceMap": true,
+    "hashAssets": false,
+    "preserveAssetsPaths": false,
+    "inlineAssets": true
+  },
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkTheme": false,
+    "iconFonts": true,
+    "fillBars": false
+  },
+  "customBuild": false
+}
