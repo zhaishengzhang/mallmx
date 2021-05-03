@@ -58,7 +58,6 @@ module.exports = {
         test: /\.(mjs|js|jsx)$/,
         include: [
           resolvePath('src'),
-
         ],
         use: [
           {

@@ -8,7 +8,7 @@ function SearchHistory(props: Props) {
     const {} = props
     const [list, setList] = useState([1,2,3,4,5,234234,23423,4234,234,234,23,4,23,4234,23,42,4,23,4,234,,3,5345345,34])
 
-    const delBtn:any = require('../../assets/icons/search-del-btn.png');
+    const delBtn:any = require('../../../assets/icons/search-del-btn.png');
 
 
     function clearHistory(){

@@ -3,7 +3,7 @@ import { Block } from 'framework7-react'
 
 
 function FlashSale() {
-    const temImg = require('../../assets/egimg/xianshiqu.png')
+    const temImg = require('../../../assets/egimg/xianshiqu.png')
     
     return (
         <Block className='flashSale'>

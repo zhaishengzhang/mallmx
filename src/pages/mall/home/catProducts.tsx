@@ -1,6 +1,6 @@
 import React ,{ useState } from 'react'
 import { Block ,Toolbar,Link,Tabs,Tab} from 'framework7-react'
-import Product2Columns from '../components/product2Columns'
+import Product2Columns from '../../components/product2Columns'
 
 function CatProducts() {
     const catelist = [
@@ -187,10 +187,12 @@ function CatProducts() {
                                 onClick = {()=>handleTabChange(index)}
                                 key = {item.id}
                             >
-                                <span>{item.name}</span>
-                                {
-                                    tabActiveIndex === index ?  (<i></i>) : ''
-                                }
+                                <span>
+                                    {item.name}
+                                    {
+                                        tabActiveIndex === index ?  (<i></i>) : ''
+                                    }
+                                </span>
                             </Link>
                         )
                     })

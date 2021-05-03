@@ -1,6 +1,6 @@
 import React from 'react'
 import { Block } from 'framework7-react'
-import Prod2Columns from '../components/product2Columns'
+import Prod2Columns from '../../components/product2Columns'
 
 interface Props {
     products:any[]; //产品列表

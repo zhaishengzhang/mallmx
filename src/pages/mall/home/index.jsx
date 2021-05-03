@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  View,
   Page,
   Searchbar,
   Link,
@@ -18,7 +19,7 @@ import {
   Category,
   MenuBar,
   SwitchEntery
-} from "../components/index.tsx";
+} from "../../components/index.tsx";
 //页面组件
 import FlashSale from "./flashSale";
 import GroupBuy from "./groupBuy";
@@ -26,15 +27,20 @@ import Discount from "./discount"
 import Products from "./products";
 import CatProducts from "./catProducts";
 
-
-
-const HomePage = () => {
-  const logo = require('../../assets/icons/search-btn.png');
-  const hongbao = require('../../assets/egimg/hongbao.png')
+const HomePage = (props) => {
+  const logo = require('../../../assets/icons/logo.png');
+  const hongbao = require('../../../assets/egimg/hongbao.png');
   console.log("logg:", logo.default);
 
+  const toSearch = ()=>{
+    console.log(props)
+    props.f7router.navigate('/search')
+    // $f7.views.main.router.navigate('/search')
+    // this.$f7router.navigate('/search')
+    // $f7router.navigate('/search');
+  }
 
-  return <Page name="home" className="homePage">
+  return <Page  init={true}  name="home" className="homePage">
     {/* 跳转到选菜页面入口 */}
     <SwitchEntery
       type={1}
@@ -45,10 +51,13 @@ const HomePage = () => {
         <Searchbar
           searchContainer=".search-list"
           searchIn=".item-title"
+          onFocus = {toSearch}
         ></Searchbar>
     </Block>
     {/* 轮播 */}
-    <Swiper></Swiper>
+    <Block className="swiperWrap">
+      <Swiper></Swiper>
+    </Block>
     {/* 公告 */}
     <Notice></Notice>
 

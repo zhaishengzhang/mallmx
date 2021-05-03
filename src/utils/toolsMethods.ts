@@ -21,32 +21,15 @@ function oneDim2AnyDim(arr:any[]=[], col:number = 2):any[] {
             _arr = [];
         }
      });
-     temArr.push(_arr);
+
+     if(_arr.length>0){
+        temArr.push(_arr);
+     }
 
      return temArr;
 }
 
-/**
- * @summary 防抖
- * @name debounce
- * @param {function} callback 回调
- * @param {number}  sleep 等待时间
- */
-
-function debounce(callback:any, sleep:number) {
-    let timer:any = null; //点击购买数量的调整
-    return (...arg:any)=>{
-        let args = arg;
-        if (timer) clearTimeout(timer);
-        
-        timer = setTimeout(() => {
-            callback(...args);
-        }, sleep);
-    }
-}
-
 export {
-    oneDim2AnyDim,
-    debounce
+    oneDim2AnyDim
 }
 

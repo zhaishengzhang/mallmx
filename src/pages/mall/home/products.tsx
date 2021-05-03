@@ -1,8 +1,8 @@
 import React from 'react'
 import { Block } from 'framework7-react'
-import PorpItem from '../components/productItem'
-import Prod2Columns from '../components/product2Columns'
-import ProdColumn from '../components/productColumn'
+import PorpItem from '../../components/productItem'
+import Prod2Columns from '../../components/product2Columns'
+import ProdColumn from '../../components/productColumn'
 
 const prodList:any[] = [
     {

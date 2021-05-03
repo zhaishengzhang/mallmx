@@ -6,18 +6,28 @@ import {
     Block,
   } from 'framework7-react';
 
+const temImg = require('../../assets/egimg/swiper.png');
+const test = [1,2,3,4]
+
 function MxSwiper(props:any) {
     const {} = props;
 
 
     return (
-        <Block className="mxSwiper">
+        <div className="mxSwiper">
             <Swiper pagination >
-                <SwiperSlide>Slide 1</SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
+                {
+                    test.map((item,index)=>{
+                        return (
+                            <SwiperSlide key={index}>
+                                <img src={temImg.default}></img>
+                            </SwiperSlide>
+                        )
+                    })
+                }
+                
             </Swiper>
-        </Block>
+        </div>
     )
 }
 

@@ -15,7 +15,10 @@ function ProductColumn(props: Props) {
                 products.map((item,index)=>{
                     return <Row key={index}>
                         <Col>
-                            <ProductItem {...item}></ProductItem>
+                            <ProductItem 
+                                is2Column = {false} 
+                                {...item}
+                            ></ProductItem>
                         </Col>
                     </Row>
                 })

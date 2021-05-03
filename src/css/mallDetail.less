@@ -1,0 +1,379 @@
+.mallDetail{
+    font-family: PingFang SC;
+    .top{
+        height: 44px;
+        margin:0;
+        position: relative;
+        background-color: #fff;
+        >img{
+            width: 9px;
+            height: 17px;
+            display: inline-block;
+            vertical-align: top;
+            position: absolute;
+            left:20px;
+            top:13px;
+            z-index: 1;
+        }
+        .nav{
+            display: inline-block;
+            margin:0 auto;
+            text-align: center;
+            width: 100%;
+            >a{
+                display: inline;
+                font-size: 15px;
+                color: #333333;
+                line-height: 44px;
+                padding:0 15px;
+            }
+        }
+    }
+    // 价格,信息等
+    .priceWrap{
+        margin:0;
+        background-color: #fff;
+        padding-top: 15px;
+        .price{
+            height: 20px;
+            position: relative;
+            >span{
+                height: 22px;
+                font-size: 22px;
+                font-weight: bold;
+                color: #E02428;
+                line-height: 22px;
+                display: inline-block;
+                >s{
+                    height: 10px;
+                    display: inline-block;
+                    font-size: 10px;
+                    color: #999999;
+                    line-height: 10px;
+                }
+            }
+            .shareBtn{
+                width: 18px;
+                height: 18px;
+                display: inline-block;
+                position: absolute;
+                right: 0px;
+                top:1px;
+            }
+        }
+        h1{
+            font-size: 15px;
+            font-weight: 500;
+            color: #333333;
+            line-height: 20px;
+            margin:15px 0;
+        }
+        .footer{
+            height: 10px;
+            font-size: 10px;
+            font-weight: 300;
+            color: #666666;
+            line-height: 10px;
+            display: flex;
+            >span{
+                flex:1;
+                text-align: left;
+            }
+            >span:nth-child(2){
+                text-align: center;
+            }
+            >span:nth-child(3){
+                text-align: right;
+            }
+        }
+    }
+    //开通会员
+    .vipsWrap{
+        padding:15px 0;
+        background-color: #fff;
+        .vips{
+            height: 32px;
+            background: #FCD2A2;
+            border-radius: 3px;
+            margin:0 15px 0;
+            padding:0 0 0 7px;
+            .desc{
+                display: inline-block;
+                >img{
+                    height: 12px;
+                    width: 14px;
+                    display: inline-block;
+                    margin-right: 4px;
+                }
+                >span{
+                    height: 11px;
+                    font-size: 11px;
+                    font-weight: 300;
+                    color: #985930;
+                    line-height: 32px;
+                }
+            }
+            .redirect{
+                display: inline-block;
+                float: right;
+                >span{
+                    height: 11px;
+                    font-size: 11px;
+                    font-weight: 300;
+                    color: #985930;
+                    line-height: 32px;
+                }
+                img{
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+    //优惠券
+    .couponWrap{
+        height: 35px;
+        border-top: 1px solid #EEEEEE;
+        margin:0;
+        padding:0 40px 0 15px;
+        position: relative;
+        background-color: #fff;
+        .title{
+            width: 86px;
+            height: 25px;
+            font-size: 13px;
+            font-family: PingFang SC;
+            font-weight: 300;
+            color: #666666;
+            line-height: 35px;
+        }
+        .coupons{
+            border: 1px solid rgba(rgba(224, 36, 40, 0.4));
+            margin-right: 5px;
+            padding:0 9px ;
+            position: relative;
+            display: inline-block;
+            white-space:nowrap;
+            i{
+                border-top: 1px solid rgba(rgba(224, 36, 40, 0.4));
+                border-right: 1px solid rgba(rgba(224, 36, 40, 0.4));
+                background-color: #fff;
+                border-radius: 50%;
+                position: absolute;
+                left: -4px;
+                height: 8px;
+                width: 8px;
+                top: 6px;
+                transform:rotate(45deg);
+            }
+            .right{
+                left: auto;
+                right:-4px;
+                transform:rotate(-135deg);
+            }
+        }
+        .redirect{
+            display: inline-block;
+            position: absolute;
+            top:6px;
+            right: 18px;
+            >span{
+                height: 11px;
+                font-size: 11px;
+                font-weight: 300;
+                color: #985930;
+                line-height: 32px;
+            }
+            img{
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    // 活动
+    .activeWrap{
+        height: 35px;
+        border-top: 1px solid #EEEEEE;
+        margin:0;
+        padding:0 40px 0 15px;
+        position: relative;
+        background-color: #fff;
+        .desc{
+            .title{
+                width: 86px;
+                height: 25px;
+                font-size: 13px;
+                font-family: PingFang SC;
+                font-weight: 300;
+                color: #666666;
+                line-height: 35px;
+            }
+            .actives{
+                height: 16px;
+                line-height: 16px;
+                background: linear-gradient(269deg, #E02428, #F37610);
+                border-radius: 17px;
+                font-size: 8px;
+                font-weight: 300;
+                color: #FFFFFF;
+                line-height: 16px;
+                margin-right: 5px;
+                padding:0 10px;
+            }
+        }
+        .redirect{
+            display: inline-block;
+            position: absolute;
+            top:6px;
+            right: 18px;
+            >span{
+                height: 11px;
+                font-size: 11px;
+                font-weight: 300;
+                color: #985930;
+                line-height: 32px;
+            }
+            img{
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        
+        
+    }
+
+    //选择商品
+    .prodSelectWrap{
+        margin-top: 10px;
+        padding-top: 12px;
+        background-color: #fff;
+        .brief{
+            height: 13px;
+            line-height: 13px;
+            padding:0 15px;
+            .label, .name{
+                height: 12px;
+                font-size: 13px;
+                font-weight: 300;
+                color: #666666;
+                line-height: 13px;
+            }
+            .name{
+                color: #333;
+            }
+            >img{
+                width: 20px;
+                height: 20px;
+                float: right;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 3px;
+            }
+        }
+        .prodList{
+            list-style: none;
+            height: 30px;
+            margin:10px 0 0 0;
+            padding:0 0 13px 60px;
+            li{
+                width: 30px;
+                height: 30px;
+                float: left;
+                margin-right: 4px;  
+                border-radius: 3px;
+                >img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 3px;
+                }
+            }
+            .total{
+                width: auto;
+                padding:0 17px;
+                background: #F5F5F5;
+                border-radius: 3px;
+                font-size: 10px;
+                font-weight: 300;
+                color: #666666;
+                line-height: 30px;
+            }
+        }
+    }
+
+    //产品详情内容
+    .prodBriefInfo{
+        background-color: #fff;
+        .block-title{
+            height: 35px;
+            font-size: 14px;
+            font-weight: 400;
+            color: #333333;
+            line-height: 35px;
+            border-bottom: 1px solid #EEEEEE;
+            margin:0;
+            padding:0;
+            text-align: center;
+        }
+        .prodContent{
+            padding:15px;
+        }
+    }
+    .mxrecommendWrap{
+        background-color: #fff;
+        .title{
+            height: 35px;
+            font-size: 14px;
+            font-weight: 400;
+            color: #333333;
+            line-height: 35px;
+            margin:0;
+            padding:0;
+            text-align: center;
+        }
+        .recommendProd{
+            .swiper-pagination-bullets{
+                bottom: 0;
+            }
+            .prodItem{
+                --gap: 5px;
+                width: calc((100% - var(--gap) * (var(--f7-cols-per-row) - 1)) / var(--f7-cols-per-row));
+                padding-bottom: 23px;
+                >img{
+                    width: 100%;
+                }
+                h3{
+                    height: 11px;
+                    font-size: 11px;
+                    font-weight: 500;
+                    color: #333333;
+                    line-height: 11px;
+                    margin:0;
+                }
+                .price{
+                    height: 12px;
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: #E02428;
+                    line-height: 12px;
+                    margin:5px 0;
+                    s{
+                        height: 10px;
+                        font-size: 10px;
+                        font-weight: 300;
+                        color: #CCCCCC;
+                        line-height: 10px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+}

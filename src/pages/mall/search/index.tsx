@@ -57,15 +57,20 @@ const prodList:any[] = [
 ]
 
 
-interface Props {}
+interface Props {
+    f7router:any
+}
 
 function SearchIndex(props: Props) {
-    const {} = props
+    const {f7router} = props
     const [prodlist, setProdlist] = useState(prodList);
     const [type , setType] = useState(2);
 
-    const backArrow:any = require('../../assets/icons/back-white.png');
+    const backArrow:any = require('../../../assets/icons/back-white.png');
 
+    const goBack = () => {
+        f7router.back();
+    }
 
     return (
         <Page 
@@ -73,7 +78,11 @@ function SearchIndex(props: Props) {
             className={ type == 1 ? "searchPage bgwhite" : "searchPage bgGray"}
         >
             <Block className="top">
-                <img src={backArrow.default} className="backBtn"></img>
+                <img 
+                    src={backArrow.default} 
+                    className="backBtn"
+                    onClick={goBack}
+                ></img>
                 <Searchbar
                 searchContainer=".search-list"
                 searchIn=".item-title"

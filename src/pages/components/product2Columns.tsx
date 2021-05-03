@@ -16,8 +16,11 @@ function Product2Columns(props: Props) {
             {rowArr.map((rowItem, index)=>{
                     return <Row key={index}>{
                         rowItem.map((item:any)=>{
-                                return (<Col key={item.id} width="50" >
-                                    <ProductItem {...item}></ProductItem>
+                                return (<Col className="colmun2" key={item.id} width="50" >
+                                    <ProductItem 
+                                        is2Column = {true}
+                                        {...item}
+                                    ></ProductItem>
                                 </Col>)
                             })
                         }

@@ -28,7 +28,7 @@ interface Props {
 
 function ShopButton(props: Props) {
     const {number, type, numberHandle, shopBtnHandle} = props
-    const shopingCart = require('../../assets/icons/menuIcon-mall-a.png');
+    const shopingCart = require('../../assets/icons/proditem-shopping-cart.png');
     const [cnumber , setCnumber] = useState(number);
     let timer:any = null; //点击购买数量的调整
 

@@ -16,7 +16,7 @@ const MyApp = () => {
 
   // Framework7 Parameters
   const f7params = {
-    name: 'meixi', // App name
+      name: 'meixi', // App name
       theme: 'auto', // Automatic theme detection
 
 
@@ -33,8 +33,13 @@ const MyApp = () => {
     // Call F7 APIs here
   });
 
-  const preUrl = location.href.replace(location.origin, "");
-
+  let preUrl = location.href.replace(location.origin, "");
+  console.log(location.origin.indexOf("localhost"))
+  if(location.origin.indexOf("localhost")>-1){
+    console.log("preUrl1:",preUrl);
+    preUrl = preUrl.replace("/mx","")
+  }
+  console.log("preUrl:",preUrl);
   return (
     <App { ...f7params } >
 
