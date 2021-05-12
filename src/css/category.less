@@ -1,0 +1,128 @@
+.categoryPage{
+    background-color: #F5F5F5;
+    .top{
+        padding: 17px 15px 13px;
+        margin:0;
+        background-color: red;
+        text-align: center;
+        display: flex;
+        >img.backBtn{
+            width: 15px;
+            height: 17px;
+            margin: 8px 10px 8px 0 ;
+            flex: 0;
+        }
+        .searchbar{
+            flex: auto;
+            height: 32px;
+            margin:0;
+            input{
+                font-size: 14px;
+            }
+        }
+    }
+    .categoryList{
+        margin:0;
+        padding:0;
+        height: 90px;
+        
+        .tabNav{
+            height: 90px;
+            background-color: #F5F5F5;
+            .toolbar-inner{
+                // height: 80px;
+                >a.link{
+                    display: inline-block;
+                    width: 68px;
+                    height: 80px;
+                    text-align: center;
+                    >img{
+                        width: 45px;
+                        height: 45px;
+                        display: inline-block;
+                        margin: 12px 0 0 0;
+                        vertical-align: middle;
+                    }
+                    >p{
+                        height: 10px;
+                        font-size: 10px;
+                        font-weight: 300;
+                        color: #333333;
+                        line-height: 10px;
+                        margin:5px 0 0 0;
+                    }
+                }
+                >a.link.cateTabActive{
+                    >img{
+                        border:2px solid rgba(224, 36, 40, 0.52);
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .tabPannel{
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        z-index: 1;
+        background-color: white;
+        .swiper-wrapper{
+            position: relative;
+            width: 100%;
+            z-index: 1;
+            transition-property: "transform";
+            box-sizing: content-box;
+            .tabPannelItem{
+                width: 100%;
+                flex-shrink: 0;
+                .menu{
+                    list-style: none;
+                    width: 78px;
+                    padding: 0;
+                    margin: 0;
+                    min-height: 100%;
+                    float: left;
+                    background: #F5F5F5;
+                    border-right: 1px solid #CCCCCC;
+                    li{
+                        height: 54px;
+                        line-height: 54px;
+                        font-size: 13px;
+                        font-weight: 300;
+                        color: #333333;
+                        text-align: center;
+                    }
+                    li.active{
+                        background-color: white;
+                        border-bottom: 1px solid #CCCCCC;
+                        border-top: 1px solid #CCCCCC;
+                        position: relative;
+                        right:-1px;
+                        i{
+                            width: 3px;
+                            height: 26px;
+                            background: #E02428;
+                            position: absolute;
+                            top: 14px;
+                            left: -1px;
+                        }
+                    }
+                    li.active.menuTop{
+                        border-bottom: 1px solid #CCCCCC;
+                        border-top: none;
+                    }
+                    
+                }
+                .list{
+                    margin:0 0 0 88px;
+                    padding:0 5px;
+                }
+            }
+        }
+    }
+}

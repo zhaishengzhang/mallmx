@@ -220,6 +220,81 @@
     }
 }
 
+//单个产品项横向通栏, 分类页面展示
+.productItemHoriColumn{
+    width: 100%;
+    margin:10px 0 0 0;
+    padding:0;
+    background: #FFFFFF;
+    font-family: PingFang SC;
+    border-bottom: 1px solid #CCCCCC;
+    .imgWrap{
+        display: inline-block;
+        width: 86px;
+        height: 86px;
+        float: left;
+        img{
+            width: 100%;
+            border-radius: 4px;
+        }
+    }
+    .info{
+        padding: 0 10px 8px 10px;
+        margin-left: 91px;
+        >h3{
+            height: 14px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333333;
+            line-height: 14px;
+            margin:0;
+            a{
+                color: #333333;
+            }
+        }
+        >p{
+            height: 15px;
+            font-size: 10px;
+            font-weight: 300;
+            color: #333333;
+            line-height: 15px;
+            margin:5px 0 0 0;
+        }
+        .tags{
+            margin:5px 0;
+            span{
+                margin-right: 5px;
+                width: 87px;
+                height: 12px;
+                border: 1px solid #E02428;
+                border-radius: 2px;
+                font-size: 10px;
+                font-weight: 300;
+                color: #E02428;
+                line-height: 12px;
+                padding:0 5px;
+            }
+        }
+    }
+    .pfooter{
+        >span{
+            height: 12px;
+            font-size: 15px;
+            font-weight: bold;
+            color: #E02428;
+            line-height: 12px;
+            s{
+                font-size: 8px;
+                color: #999999;
+                font-weight: normal;
+            }
+        }
+       .shopbtn{
+           float: right;
+       }
+    }
+}
+
 // 通栏展示
 .productColumn{
     width: 100%;
@@ -314,6 +389,7 @@
 
 // 购买弹出层组件
 .popBuyPannel{
+    position: fixed;
     font-family: PingFang SC;
     border-radius: 25px 25px  0 0;
     .top{
@@ -321,6 +397,7 @@
         margin:0;
         padding:26px 16px 15px;
         display: flex;
+        border-radius: 25px 25px  0 0;
         border-bottom: 1px solid #EEEEEE;
 
         .closeBtn{
@@ -457,6 +534,56 @@
     }
     
 }
+.sheet-modal-bottom:before, .sheet-modal:not(.sheet-modal-top):before{
+    display: none;
+}
+
+// 优惠券弹出层组件
+.popCouponsPannel{
+    font-family: PingFang SC;
+    border-radius: 25px 25px  0 0;
+    .top{
+        position: relative;
+        margin:0;
+        padding:0;
+        display: flex;
+        border-bottom: 1px solid #EEEEEE;
+        border-radius: 25px 25px  0 0;
+        .toolbar{
+            background:white;
+            border-radius: 25px 25px  0 0;
+            .toolbar-inner{
+                overflow: visible;
+            }
+            .tab-link{
+                position: relative;
+                overflow: visible;
+                i{display: none;}
+            }
+            .tab-link-active{
+                color: #333333;
+                i{
+                    display: inline-block;
+                    position: absolute;
+                    height: 2px;
+                    width: 50px;
+                    bottom: -1px;
+                    background: #E12727;
+                    z-index: 2000;
+                }
+            }
+        }
+    }
+
+    .couponsWrap{
+        margin:13px 0 0 0;
+        .block{
+            margin:0;
+        }
+    }
+    
+    
+}
 
 // 入口模块
 .switchEntery{
@@ -472,3 +599,227 @@
     }
 }
 
+
+//星级
+.starWrap{
+    height: 15px;
+    >img{
+        display: inline-block;
+        height: 100%;
+    }
+}
+
+//评论item
+.commentItem{
+    margin:0;
+    padding:10px 0 20px 0;
+    .head{
+        .userInfo{
+            height: 28px;
+            >img.avatar{
+                width: 28px;
+                height: 28px;
+                display: inline-block;
+                margin-right:8px;
+            }
+            .name{
+                display: inline-block;
+                height: 10px;
+                font-size: 10px;
+                font-weight: 400;
+                color: #333333;
+                line-height: 10px;
+                vertical-align: top;
+                margin:10px 6px 0 0;
+            }
+            >img.vipIcon{
+                width: 15px;
+                height: 15px;
+                display: inline-block;
+                margin-right: 10px;
+                margin:6px 10px 0 0;
+                vertical-align: top;
+            }
+            .stars{
+                display: inline-block;
+                height: 15px;
+                vertical-align: top;
+                margin:6px 10px 0 0;
+                margin-right: 10px;
+            }
+        }
+        .orderInfo{
+            height: 10px;
+            font-size: 10px;
+            font-weight: 300;
+            color: #666666;
+            line-height: 10px;
+            margin-top: 10px;
+            >span{
+                margin-right: 10px;
+            }
+        }
+    }
+    .commentCont{
+        margin-top: 20px;
+        >p{
+            font-size: 14px;
+            font-weight: 400;
+            color: #333333;
+            line-height: 16px;
+            margin:10px 0;
+        }
+        .imgWrap{
+            >img{
+                width: 80px;
+                height: 80px;
+                margin-right: 5px;
+            }
+        }
+
+    }
+    .reply{
+        min-height: 36px;
+        background: #F5F5F5;
+        border-radius: 2px;
+        font-size: 11px;
+        font-weight: 400;
+        color:#333;
+        line-height: 20px;
+        padding:10px;
+        margin-top: 12px;
+        position: relative;
+        >span.replyer{
+            color: #E02428;
+        }
+        .arrow{
+            width: 0;
+            height: 0;
+            display: inline-block;
+            position: absolute;
+            top:-16px;
+            left: 20px;
+            border-width: 10px;
+            border-style: solid;
+            border-radius: 2px;
+            border-color: transparent #F5F5F5 transparent transparent;
+            transform: rotate(90deg); /*顺时针旋转90°*/
+        }
+    }
+    
+}
+.commentItem.borderBottom{
+    border-bottom: 1px solid #CCCCCC;
+}
+
+// 单个优惠券
+.CouponsItem{
+    padding:0;
+    margin:0;
+    width: 100%;
+    height: 98px;
+    font-family: PingFang SC;
+    // box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.19);
+    background: url('@/assets/icons/coupons_red.png') 0 0 no-repeat;
+    background-size: 100%;
+    background-position: 0px 0px;
+    .label{
+        height: 85px;
+        width: 121px;
+        float: left;
+        display: inline-block;
+        
+        color:#fff;
+        >p{
+            text-align: center;
+            margin:0;
+        }
+        .number{
+           font-size: 25px;
+           line-height: 25px;
+           font-weight: bold;
+           margin-top: 22px;
+           span{
+                font-size: 14px;
+                line-height: 14px;
+           }
+        }
+        .ctype{
+            font-size: 11px;
+             line-height: 11px;
+             margin-top:6px;
+        }
+    }
+    .info{
+        margin-left: 131px;
+        padding-top:15px;
+        height: 75px;
+        position: relative;
+        .infoTop{
+            .type{
+                height: 15px;
+                background: #FBE1DD;
+                border: 1px solid #E05745;
+                border-radius: 8px;
+                font-size: 10px;
+                font-weight: 400;
+                color: #DF5543;
+                line-height: 15px;
+                padding:0 5px;
+            }
+            .getType{
+                height: 15px;
+                font-size: 11px;
+                font-weight: 400;
+                color: #000000;
+                line-height: 15px;
+                padding-left: 5px;
+            }
+        }
+        >p{
+            height: 12px;
+            font-size: 10px;
+            color: #666666;
+            margin:32px 0 0 0;
+        }
+        .operate{
+            position: absolute;
+            bottom: 8px;
+            right: 15px;
+            >span{
+                display: inline-block;
+                height: 20px;
+                background: #E05745;
+                border-radius: 20px;
+                font-size: 10px;
+                font-weight: 400;
+                color: #FFFFFF;
+                line-height: 20px;
+                padding:0 10px;
+            }
+            
+        }
+    }
+}
+
+//通用优惠券
+.commonCoupons{
+    background: url('@/assets/icons/coupons_yellow.png') 0 0 no-repeat;
+    background-size: 100%;
+    background-position: 0px 0px;
+    .info{
+        .infoTop{
+            .type{
+                background: #FCF8F0;
+                border: 1px solid #E7C890;
+                color: #E7C890;
+            }
+        }
+        .operate{
+            >span{
+                background: #E7C890;
+            }
+            
+        }
+    }
+}

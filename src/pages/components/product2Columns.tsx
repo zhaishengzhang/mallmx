@@ -10,13 +10,12 @@ interface Props {
 function Product2Columns(props: Props) {
     let {products} = props
     const rowArr = oneDim2AnyDim(products, 2);
-
     return (
         <div className="productColumn">
             {rowArr.map((rowItem, index)=>{
                     return <Row key={index}>{
                         rowItem.map((item:any)=>{
-                                return (<Col className="colmun2" key={item.id} width="50" >
+                                   return (<Col className="colmun2" key={item.id} width="50" >
                                     <ProductItem 
                                         is2Column = {true}
                                         {...item}

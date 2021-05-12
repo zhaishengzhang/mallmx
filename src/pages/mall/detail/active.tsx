@@ -20,10 +20,6 @@ function Active(props: Props) {
                         return <span className="actives" key={index}>{item.name}</span>
                     })
                 }
-                
-            </div>
-            <div className="redirect">
-                <img src={rightArrowIcon.default}></img>
             </div>
         </Block>
     )

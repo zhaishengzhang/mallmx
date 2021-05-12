@@ -28,7 +28,6 @@ const _tags = [121,323]
 function ProductItem(props: Props) {
     const {id, name, imgUrl, desc,tags,price, weight,type=1,is2Column} = props
     const [pop, setPop] = useState(false);
-    
     // 购物车数据处理
     function stepperChangeHandle(number:number):void{
         console.log("production item ---number  : ", number);

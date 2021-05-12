@@ -1,19 +1,20 @@
 .mallDetail{
     font-family: PingFang SC;
+    padding-bottom: 20px;
     .top{
         height: 44px;
         margin:0;
         position: relative;
         background-color: #fff;
         >img{
-            width: 9px;
+            width: 15px;
             height: 17px;
             display: inline-block;
             vertical-align: top;
             position: absolute;
             left:20px;
             top:13px;
-            z-index: 1;
+            z-index: 20;
         }
         .nav{
             display: inline-block;
@@ -137,9 +138,11 @@
         height: 35px;
         border-top: 1px solid #EEEEEE;
         margin:0;
-        padding:0 40px 0 15px;
-        position: relative;
+        padding:0 15px 0 15px;
         background-color: #fff;
+        .desc{
+            display: inline-block;
+        }
         .title{
             width: 86px;
             height: 25px;
@@ -152,10 +155,11 @@
         .coupons{
             border: 1px solid rgba(rgba(224, 36, 40, 0.4));
             margin-right: 5px;
-            padding:0 9px ;
+            padding:0 12px ;
             position: relative;
             display: inline-block;
             white-space:nowrap;
+            color: #E02428;
             i{
                 border-top: 1px solid rgba(rgba(224, 36, 40, 0.4));
                 border-right: 1px solid rgba(rgba(224, 36, 40, 0.4));
@@ -176,9 +180,8 @@
         }
         .redirect{
             display: inline-block;
-            position: absolute;
-            top:6px;
-            right: 18px;
+            float:right;
+            margin-top: 6px;
             >span{
                 height: 11px;
                 font-size: 11px;
@@ -225,28 +228,7 @@
                 margin-right: 5px;
                 padding:0 10px;
             }
-        }
-        .redirect{
-            display: inline-block;
-            position: absolute;
-            top:6px;
-            right: 18px;
-            >span{
-                height: 11px;
-                font-size: 11px;
-                font-weight: 300;
-                color: #985930;
-                line-height: 32px;
-            }
-            img{
-                width: 20px;
-                height: 20px;
-                display: inline-block;
-                vertical-align: middle;
-            }
-        }
-        
-        
+        } 
     }
 
     //选择商品
@@ -306,7 +288,52 @@
             }
         }
     }
-
+    // 评论内容
+    .commentWrap{
+        background-color: #fff;
+        margin-top:10px;
+        .top{
+            height: 35px;
+            font-size: 14px;
+            font-weight: 400;
+            color: #333333;
+            line-height: 35px;
+            margin:0;
+            padding:0;
+            text-align: left;
+            .more{
+                float: right;
+                img{
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-top: 6px;
+                }
+            }
+        }
+        .tags{
+            list-style: none;
+            padding:0 0 10px 0;
+            margin:0;
+            border-bottom: 1px solid #EEEEEE;
+            li{
+                height: 16px;
+                display: inline-block;
+                background: #FAE7E7;
+                border-radius: 8px;
+                height: 16px;
+                font-size: 10px;
+                font-weight: 300;
+                color: #333333;
+                line-height: 16px;
+                padding:0 6px;
+                margin-right: 6px;
+            }
+            
+        }
+        
+    }
     //产品详情内容
     .prodBriefInfo{
         background-color: #fff;
@@ -323,10 +350,12 @@
         }
         .prodContent{
             padding:15px;
+            margin:0;
         }
     }
     .mxrecommendWrap{
         background-color: #fff;
+        margin-top: 10px;
         .title{
             height: 35px;
             font-size: 14px;
@@ -372,6 +401,60 @@
                         margin-left: 5px;
                     }
                 }
+            }
+        }
+    }
+
+    .buyBarWrap{
+        height: 48px;
+        width: 100%;
+        padding:0 8px 0 0;
+        margin:0;
+        background: #FFFFFF;
+        display: flex;
+        flex-wrap: nowrap;
+        position: fixed;
+        bottom: 0;
+        .operateBtn{
+            flex:4;
+            display: flex;
+            >span{
+                flex:1;
+                display: inline-block;
+                font-size: 10px;
+                font-weight: 300;
+                color: #666666;
+                line-height: 10px;
+                text-align: center;
+                padding-top:8px;
+                >img{
+                    width: 22px;
+                    height: 22px;
+                    margin:0 auto 3px;
+                    display: block;
+                }
+            }
+        }
+        .buyBtnsWrap{
+            flex:5;
+            display: flex;
+            margin:5px 0;
+            >span{
+                display: inline-block;
+                flex:1;
+                background-color:#EB8B38;
+                border-radius:19px 0 0 19px;
+                font-size: 14px;
+                font-weight: 400;
+                color: #FFFFFF;
+                height: 38px;
+                line-height: 38px;
+                text-align: center;
+                padding:0 10px;
+            }
+            .buy{
+                background-color:#E76931;
+                border-radius:0  19px 19px 0;
             }
         }
     }

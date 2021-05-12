@@ -57,7 +57,7 @@ function Category(props:any) {
                 category.map((item)=>{
                     return (
                         <li key={item.id}>
-                            <Link href={item.id}>
+                            <Link href={"/mallcate?id="+item.id}>
                                 <img src={item.icon.default}></img>
                                 <p>{item.name}</p>
                             </Link>

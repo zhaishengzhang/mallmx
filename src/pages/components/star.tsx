@@ -6,9 +6,9 @@ interface Props {
 
 function Star(props: Props) {
     const {star} = props
-    const all = 5;
-    const starRed = require("../../../assets/icons/star-red.png");
-    const starDef = require("../../../assets/icons/star-default.png");
+    const all = 5; //最好的是几星
+    const starRed = require("../../assets/icons/star-red.png");
+    const starDef = require("../../assets/icons/star-default.png");
 
     const initArr:any[] = [];
     const [starArr, setStarArr] = useState(initArr);
@@ -16,7 +16,7 @@ function Star(props: Props) {
     // 设置star展示数组, star:[], 如果为0,则用灰色, 如果1则红色
     const fillStarArr = (star:number):any[]=>{
         const _temArr = new Array(all);
-        for(let i = 0; i<all; i++){
+        for(let i = 1; i<=all; i++){
             if(i <= star){
                 _temArr.push(1);
             }else{

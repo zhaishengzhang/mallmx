@@ -12,7 +12,6 @@ import ProdSelect from "./productSelect";
 import Comment from "./comment";
 import MxRecomment from "./mxrecommend";
 import BuyBar from "./buyBar";
-import Anchor from './anchor'
 
 
 const backArrow:any = require('@/assets/icons/back-black.png');
@@ -70,12 +69,12 @@ function Index(props: Props) {
     const {f7router} = props
 
     const goBack = () => {
+        console.log(7777);
         f7router.back();
     }
 
     //锚点滚动
     const scrollToAnchor = (anchor:string)=>{
-        console.log("anchor::",anchor);
         if (!!anchor) {
             let anchorElement = document.getElementById(anchor);
             if (anchorElement) {
@@ -139,6 +138,7 @@ function Index(props: Props) {
             <MxRecomment ></MxRecomment>
             {/* 沟通按钮 */}
             <BuyBar></BuyBar>
+            {/* 优惠券 */}
         </Page>
     )
 }

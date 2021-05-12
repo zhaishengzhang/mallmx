@@ -39,6 +39,11 @@ const MyApp = () => {
     console.log("preUrl1:",preUrl);
     preUrl = preUrl.replace("/mx","")
   }
+  if(location.origin.indexOf("zhaishengzhang.github.io")>-1){
+    console.log("preUrl1:",preUrl);
+    preUrl = preUrl.replace("/mxpre","")
+  }
+
   console.log("preUrl:",preUrl);
   return (
     <App { ...f7params } >

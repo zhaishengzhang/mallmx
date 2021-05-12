@@ -29,6 +29,8 @@ function PopBuyPannel(props: Props) {
                 onSheetClosed={onSheetClosed}
                 className="popBuyPannel"
                 style={{height: 'auto'}}
+                backdrop
+                swipeToClose
             >
                 <PageContent>
                     <Block className="top">

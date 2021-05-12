@@ -1,4 +1,6 @@
-import React from 'react'
+import React ,{useState} from 'react'
+import PopBuyPannel from "../../components/popBuyPannel";
+import { click } from 'dom7';
 
 
 const prodList:any[] = [
@@ -105,17 +107,28 @@ const temImg = require('@/assets/egimg/banlanchanp.png')
 
 
 interface Props {}
+
 const rightArrowIcon = require("@/assets/icons/right_arrow.png");
 
 function ProductSelect(props: Props) {
     const {} = props
+    const [pop, setPop] = useState(false);
     
     const arrowBtnHandle = ()=>{
         
     }
 
+    // 弹窗处理
+    function shopBtnHandle(){
+        console.log("shopBtnHandle");
+        setPop(true);
+    }
+    function onSheetClosed(){
+        setPop(false);
+    }
+
     return (
-        <div className="prodSelectWrap">
+        <div className="prodSelectWrap" onClick={shopBtnHandle}>
             <div className="brief">
                 <span className="label">已选择:</span>
                 <span className="name">asdfasfsasd</span>
@@ -131,6 +144,11 @@ function ProductSelect(props: Props) {
                 }
                 <li className="total">共有{prodList.length}款选择</li>
             </ul>
+
+            <PopBuyPannel 
+                pop={pop}
+                onSheetClosed =  {onSheetClosed}
+            ></PopBuyPannel>
         </div>
     )
 }
