@@ -4,7 +4,15 @@ import Star from '../../components/star'
 
 //test code
 const _img = [
-    2,3,4,5,6
+    {
+        img:require("@/assets/egimg/prodimg/mall/detail/1_13.jpg")
+    },
+    {
+        img:require("@/assets/egimg/prodimg/mall/detail/1_15.jpg")
+    },
+    {
+        img:require("@/assets/egimg/prodimg/mall/detail/1_17.jpg")
+    }
 ]
 
 interface Props {
@@ -13,8 +21,8 @@ interface Props {
 function CommentItem(props: Props) {
     const {} = props
 
-    const avatar = require("../../../assets/icons/commet-user-avata.png")
-    const vipIcon = require("../../../assets/icons/detail-vip.png");
+    const avatar = require("@/assets/icons/commet-user-avata.png");
+    const vipIcon = require("@/assets/icons/detail-vip.png");
 
     return (
         <Block className="commentItem" >
@@ -36,7 +44,7 @@ function CommentItem(props: Props) {
                 <div className="imgWrap">
                     {
                         _img.map((item, index)=>{
-                            return <img src={avatar.default} key={index}></img>
+                            return <img src={item.img.default} key={index}></img>
                         })
                     }
                 </div>

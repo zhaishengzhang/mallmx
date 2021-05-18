@@ -15,9 +15,9 @@ function SwitchEntery(props: Props) {
         <div className="switchEntery">
             {
             type == 1 ?
-                <img src={toxcicon.default}></img>
+                <a href="/vegeindex" ><img src={toxcicon.default}></img></a>
             :
-                <img src={toxchome.default}></img>
+                <a href="/index.html" ><img src={toxchome.default}></img></a>
             }
         </div>
     )

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Block } from 'framework7-react'
+import { Block ,Link} from 'framework7-react'
 import CommentItem from '../components/commentItem'
 
 const list = [1]
@@ -20,8 +20,10 @@ function Comment(props: Props) {
             <div className="top">
                 <span> 用户评论 12</span>
                 <span className="more">
-                    查看全部
-                    <img src={rightArrowIcon.default}></img>
+                    <Link href="/comment">
+                        查看全部
+                        <img src={rightArrowIcon.default}></img>
+                    </Link>
                 </span>
             </div>
             <ul className="tags">

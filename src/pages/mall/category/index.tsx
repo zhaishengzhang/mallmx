@@ -185,6 +185,7 @@ function Index(props: Props) {
                                 <div className="list">
                                     {
                                         productList.map((item,index)=>{
+                                            item.type  = 1;
                                             return <Product {...item}></Product>
                                         })
                                     }

@@ -11,7 +11,7 @@ function Products(props:Props) {
     
     return (
         <Block>
-            <Prod2Columns products={products}></Prod2Columns>
+            <Prod2Columns type={1} products={products}></Prod2Columns>
         </Block>
     )
 }

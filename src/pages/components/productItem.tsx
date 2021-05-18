@@ -10,15 +10,16 @@ const temImgTonglan = require('../../assets/egimg/tonglan.png')
 interface Props {
     id:number,
     name:string,
+    type:number, //类型1,mall, 2自选
     imgUrl:string,
+    is2Column:boolean, //是不是两列展示
     desc?:string,
     tags?:any[],
     price?:number,
     weight?:number,
     isWholeColumn?:boolean,
 
-    type:number, //类型1,mall, 2自选
-    is2Column:boolean, //是不是两列展示
+    
 
 }
 
@@ -26,7 +27,7 @@ interface Props {
 const _tags = [121,323]
 
 function ProductItem(props: Props) {
-    const {id, name, imgUrl, desc,tags,price, weight,type=1,is2Column} = props
+    const {id, name, type=1,imgUrl,is2Column, desc,tags,price, weight} = props
     const [pop, setPop] = useState(false);
     // 购物车数据处理
     function stepperChangeHandle(number:number):void{
@@ -44,13 +45,13 @@ function ProductItem(props: Props) {
 
     return (
         <Block className="productItem">
-            <Link className={is2Column ? "imgWrap twoColumnWrap" : "imgWrap"} href={type ==1 ? "/detail?id="+id : "/detail?id="+id} >
+            <Link className={is2Column ? "imgWrap twoColumnWrap" : "imgWrap"} href={type ==1 ? "/detail?id="+id : "/vegedetail?id="+id} >
                 <img src={is2Column ?  temImg.default : temImgTonglan.default  }></img>
             </Link>
             
             <div className="info">
                 <h3>
-                    <Link href={type ==1 ? "/detail?id="+id : "/detail?id="+id} >
+                    <Link href={type ==1 ? "/detail?id="+id : "/vegedetail?id="+id} >
                         {name}
                     </Link></h3>
                 <p>{desc}</p>
@@ -62,7 +63,7 @@ function ProductItem(props: Props) {
                     }
                 </div>
                 <div className="pfooter">
-                <span>¥ {price} <s>¥{342}</s></span>
+                    {type == 1 ?<span>¥ {price} <s>¥{342}</s></span>:null}
                     <span className="shopbtn">
                         <ShopButton 
                             number={0}

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Block ,Link} from 'framework7-react'
 
 function Category(props:any) {
-    const {} = props;
+    const {type} = props;
     const temList:any[] = [
         {
             id:2,
@@ -51,13 +51,13 @@ function Category(props:any) {
 
 
     return (
-        <Block className="categoryWrap">
+        <Block className={type == 1 ? "categoryWrap" : "categoryWrap vegeCate"} >
             <ul>
                 {
                 category.map((item)=>{
                     return (
                         <li key={item.id}>
-                            <Link href={"/mallcate?id="+item.id}>
+                            <Link href={type == 1 ? "/mallcate?id="+item.id : "/vegecate?id="+item.id}>
                                 <img src={item.icon.default}></img>
                                 <p>{item.name}</p>
                             </Link>

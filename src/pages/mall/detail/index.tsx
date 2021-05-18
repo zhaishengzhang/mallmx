@@ -15,6 +15,8 @@ import BuyBar from "./buyBar";
 
 
 const backArrow:any = require('@/assets/icons/back-black.png');
+//test data
+const content:any = require('@/assets/egimg/prodimg/xuancai/detail/content.jpg');
 
 
 //test 数据
@@ -130,7 +132,7 @@ function Index(props: Props) {
             <div className="prodBriefInfo" id="detail">
                 <BlockTitle>商品详情</BlockTitle>
                 <Block className="prodContent">
-                    {"adfsasdfasdfasdfasdfasdf"}
+                    <img src={content.default} />
                 </Block>
             </div>
             {/* 莓溪推荐 */}

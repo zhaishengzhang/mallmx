@@ -56,7 +56,7 @@ const HomePage = (props) => {
     </Block>
     {/* 轮播 */}
     <Block className="swiperWrap">
-      <Swiper></Swiper>
+      <Swiper type={1}></Swiper>
     </Block>
     {/* 公告 */}
     <Notice></Notice>
@@ -69,7 +69,7 @@ const HomePage = (props) => {
     </Block>
     
     {/* 产品分类 */}
-    <Category></Category>
+    <Category type="1"></Category>
     {/* 拼团 */}
     <GroupBuy></GroupBuy>
     {/* 秒杀 */}
@@ -80,7 +80,6 @@ const HomePage = (props) => {
     <Products></Products>
     {/* 带分类产品展示选项卡 */}
     <CatProducts></CatProducts>
-
 
     <Toolbar tabbar bottom>
       <MenuBar></MenuBar>

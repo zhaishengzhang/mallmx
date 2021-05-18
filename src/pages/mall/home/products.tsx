@@ -116,11 +116,11 @@ function Products() {
                 prodList.map((item,index)=>{
                     if(item.isWholeColumn){
                         return (
-                            <ProdColumn products={item.products} key={index}></ProdColumn>
+                            <ProdColumn type={1} products={item.products} key={index}></ProdColumn>
                         )
                     }else{
                         return (
-                            <Prod2Columns products={item.products} key={index}></Prod2Columns>
+                            <Prod2Columns type={1} products={item.products} key={index}></Prod2Columns>
                         )
                     }
                     

@@ -135,7 +135,7 @@
     }
     //优惠券
     .couponWrap{
-        height: 35px;
+        height: 45px;
         border-top: 1px solid #EEEEEE;
         margin:0;
         padding:0 15px 0 15px;
@@ -145,12 +145,12 @@
         }
         .title{
             width: 86px;
-            height: 25px;
+            height: 45px;
             font-size: 13px;
             font-family: PingFang SC;
             font-weight: 300;
             color: #666666;
-            line-height: 35px;
+            line-height: 45px;
         }
         .coupons{
             border: 1px solid rgba(rgba(224, 36, 40, 0.4));
@@ -181,7 +181,7 @@
         .redirect{
             display: inline-block;
             float:right;
-            margin-top: 6px;
+            margin-top: 11px;
             >span{
                 height: 11px;
                 font-size: 11px;
@@ -200,7 +200,7 @@
 
     // 活动
     .activeWrap{
-        height: 35px;
+        height: 45px;
         border-top: 1px solid #EEEEEE;
         margin:0;
         padding:0 40px 0 15px;
@@ -209,22 +209,22 @@
         .desc{
             .title{
                 width: 86px;
-                height: 25px;
+                height: 45px;
                 font-size: 13px;
                 font-family: PingFang SC;
                 font-weight: 300;
                 color: #666666;
-                line-height: 35px;
+                line-height: 45px;
             }
             .actives{
-                height: 16px;
-                line-height: 16px;
+                height: 22px;
+                line-height: 22px;
+                display: inline-block;
                 background: linear-gradient(269deg, #E02428, #F37610);
                 border-radius: 17px;
                 font-size: 8px;
                 font-weight: 300;
                 color: #FFFFFF;
-                line-height: 16px;
                 margin-right: 5px;
                 padding:0 10px;
             }
@@ -303,12 +303,15 @@
             text-align: left;
             .more{
                 float: right;
+                a{
+                    color: #333333;
+                }
                 img{
                     width: 20px;
                     height: 20px;
                     display: inline-block;
                     vertical-align: top;
-                    margin-top: 6px;
+                    margin-top: -1px;
                 }
             }
         }
@@ -351,6 +354,7 @@
         .prodContent{
             padding:15px;
             margin:0;
+            >img{width:100%}
         }
     }
     .mxrecommendWrap{
@@ -384,6 +388,15 @@
                     color: #333333;
                     line-height: 11px;
                     margin:0;
+                    a{
+                        width: 100%;
+                        display: inline-block;
+                        text-align: left;
+                        color: #333333;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
                 }
                 .price{
                     height: 12px;

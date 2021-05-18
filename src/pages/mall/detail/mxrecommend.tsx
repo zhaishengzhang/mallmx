@@ -4,7 +4,8 @@ import {
     Swiper,
     SwiperSlide,
     Row,
-    Col
+    Col,
+    Link
 } from 'framework7-react'
 import {oneDim2AnyDim} from '../../../utils/toolsMethods'
 
@@ -131,7 +132,7 @@ function Mxrecommend(props: Props) {
     return (
         <Block className="mxrecommendWrap">
             <div className="title">莓溪推荐</div>
-            <Swiper className="recommendProd" pagination>{
+            <Swiper className="recommendProd mxSwiperBlack" pagination>{
                 list.map((item, index)=>{
                     return (
                         <SwiperSlide  key={index}>{
@@ -143,7 +144,11 @@ function Mxrecommend(props: Props) {
                                                         return (
                                                             <Col key={i} className="prodItem">
                                                                 <img src = {temImg.default}></img>
-                                                                <h3>{v.name}</h3>
+                                                                <h3>
+                                                                    <Link href={"/detail?id="+v.id } >
+                                                                    {v.name}
+                                                                    </Link>
+                                                                </h3>
                                                                 <p className="price">¥ {v.price}<s>¥ {v.price}</s></p>
                                                             </Col> 
                                                         )

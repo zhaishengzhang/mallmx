@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Page ,Block} from 'framework7-react'
 import CommentItem from '../components/commentItem'
 
 const backArrow:any = require('@/assets/icons/back-black.png');
-
+const downArrow:any = require('@/assets/icons/commentArrowDown.png');
+const upArrow:any = require('@/assets/icons/commentArrowUp.png');
 
 //test
-const tags = ["全部", "bangbande", "便宜实惠", "味道好"]
+const tags:any[] = ["全部", "bangbande", "便宜实惠", "味道好", "bangbande", "便宜实惠", "味道好", "bangbande", "便宜实惠", "味道好", "bangbande", "便宜实惠", "味道好"]
 
 
 
@@ -16,9 +17,37 @@ interface Props {
 }
 function Index(props: Props) {
     const {f7router} = props
+    const [open, setOpen] = useState(false);
+    const [tagArr, setTagArr] = useState(tags);
+    
+    const initTags = ()=>{
+        if(!open){
+            let _tag = [...tags.slice(0,4)];
+            // console.log("tag::",_tag);
+            setTagArr(_tag);
+        }
+    }
+    
+    useEffect(()=>{
+        //初始化tags数据
+        initTags();
+    },[])
+
+    useEffect(()=>{
+        if(open){
+            setTagArr(tags);
+        }else{
+            setTagArr(tags.slice(0,4));
+        }
+    },[open])
 
     const goBack = () => {
         f7router.back();
+    }
+
+    const switchHandle=()=>{
+        console.log("opten",open)
+        setOpen(!open);
     }
 
     return (
@@ -37,13 +66,21 @@ function Index(props: Props) {
                 <p className="title">用户评价 (45)</p>
                 <ul className="tags">
                     {
-                        tags.map((item,index)=>{
+                        tagArr.map((item,index)=>{
                             return <li className={index == 0 ? "active" : ""}>{item}</li>
                         })
                     }
                 </ul>
-                <div className="footer">
-                    <span>打开</span>
+                <div className="footer" onClick={switchHandle}>
+                    {
+                        open ? 
+                        <span  className="open">
+                            <img src={upArrow.default}/>
+                        </span> :
+                        <span  className="close">
+                            <img src={downArrow.default}/>
+                        </span>
+                    }
                 </div>
             </Block>
             <Block className="commentsWrap">
